@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "seasons",
   "version": "${version}",
-  "name": "Fabric Seasons",
-  "description": "A simple mod that adds seasons to the game, dynamically changing biomes as you play.",
+  "name": "Fabric Seasons - TCSeasons",
+  "description": "A simple mod that adds seasons to the game, dynamically changing biomes as you play. Modified for Taeko & Co.",
   "authors": [
     "D4rkness_King"
   ],

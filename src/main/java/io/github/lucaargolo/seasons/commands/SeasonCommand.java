@@ -3,6 +3,7 @@ package io.github.lucaargolo.seasons.commands;
 import com.mojang.brigadier.CommandDispatcher;
 import io.github.lucaargolo.seasons.FabricSeasons;
 import io.github.lucaargolo.seasons.utils.Season;
+import io.github.lucaargolo.seasons.utils.TCSeason;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.command.TimeCommand;
@@ -74,6 +75,8 @@ public class SeasonCommand {
                             Long.toString(ticksLeft),
                             Text.translatable(nextSeason.getTranslationKey()).formatted(nextSeason.getFormatting())
                     ), false);
+                    context.getSource().sendFeedback(() -> Text.of("It is day " + TCSeason.getYearDay()), false);
+                    context.getSource().sendFeedback(() -> Text.of("The temperature is " + TCSeason.temperatureConverter(FabricSeasons.currentTemperature, true)), false);
                     return currentSeason.ordinal();
                 })
             )
